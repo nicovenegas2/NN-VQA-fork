@@ -1,0 +1,23 @@
+name: nn-vqe-2023
+channels:
+  - conda-forge
+  - defaults
+# (opcional) fuerza prioridad estricta
+# channel_priority: strict
+dependencies:
+  - python=3.9.12
+  - pip>=23
+  - ipykernel
+  - numpy=1.26.4
+  - scipy=1.11.4
+  - tqdm=4.66.1
+  - vs2015_runtime        # runtime de MSVC para Windows
+  - pip:
+      - tensorflow==2.12.1
+      - tensorcircuit==0.11.*
+      - cotengra==0.6.*
+      - quimb==1.5.*
+      - qiskit-terra==0.46.3   # evita compilar qiskit-aer en Windows
+      - ray==2.6.3
+      - opt-einsum==3.3.0
+      - matplotlib==3.7.4
