@@ -4,17 +4,18 @@ channels:
   - defaults
 dependencies:
   - python=3.9.12
-  - pip
+  - pip>=23
   - ipykernel
   - numpy=1.26.4
   - scipy=1.11.4
-  - matplotlib=3.7.4
   - tqdm=4.66.1
+  # el resto va por pip para clavar versiones de 2023
   - pip:
+      - matplotlib==3.7.4
       - tensorflow==2.12.1
       - tensorcircuit==0.11.*
       - cotengra==0.6.*
       - quimb==1.5.*
-      - qiskit==0.46.3
+      - qiskit-terra==0.46.3     # suficiente para circuit.draw()
       - ray==2.6.3
       - opt-einsum==3.3.0
