@@ -6,16 +6,22 @@ dependencies:
   - python=3.9.12
   - pip>=23
   - ipykernel
-  - numpy=1.26.4
+  # base científico (compat 2023)
+  - numpy=1.24.4
   - scipy=1.11.4
   - tqdm=4.66.1
-  # el resto va por pip para clavar versiones de 2023
+  # clave para quimb:
+  - numba=0.58.*         # incluye generated_jit
+  - llvmlite=0.41.*      # pareja de numba 0.58
+  - networkx=3.1
+  - cytoolz
+  # el resto por pip (versiones del paper)
   - pip:
       - matplotlib==3.7.4
       - tensorflow==2.12.1
       - tensorcircuit==0.11.*
       - cotengra==0.6.*
       - quimb==1.5.*
-      - qiskit-terra==0.46.3     # suficiente para circuit.draw()
+      - qiskit-terra==0.46.3      # suficiente para circuit.draw()
       - ray==2.6.3
       - opt-einsum==3.3.0
