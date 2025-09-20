@@ -43,7 +43,7 @@ def energy(c: tc.Circuit, delta: float = 1.0, lamb: float = 1.0):
         )  # <Z_i Z_{i+1}>
     return K.real(e)
 
-print("##############-Energy function Done-############")
+print("##############-Energy function Done-###########")
 print("##############-VQE function-############")
 def VQE(inp, n, d=1, energy_flag=False):
     params = K.cast(inp["params"], "complex128")
